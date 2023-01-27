@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Form Personaje
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="personaje">
+    <ion-item lines="full">
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="personaje.nombre"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="stacked">Ocupacion</ion-label>
+      <ion-input type="text" [(ngModel)]="personaje.ocupacion"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="stacked">Origen</ion-label>
+      <ion-input type="text" [(ngModel)]="personaje.origen"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="stacked">Universo</ion-label>
+      <ion-input type="number" [(ngModel)]=" personaje.universo"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button color="danger" expand="block" (click)="updatePersonaje()">
+    Submit
+  </ion-button>
+
+</ion-content>

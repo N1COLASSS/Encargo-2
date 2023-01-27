@@ -1,0 +1,39 @@
+<ion-header class="ion-no-header">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="primary" routerLink="/register">Sign Up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="../../../assets/img/login.png">
+  </div>
+
+  <form id="form" [formGroup]="credentials" (ngSubmit)="login()">
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      <ion-note slot="error" *ngIf="(f['email'].dirty || f['email'].touched) && f['email'].errors">Email no válido</ion-note>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">
+        <ul>
+          <li>La contraseña debe tener entre 6 y 10 caracteres.</li>
+          <li>Al menos un dígito, al menos una minúscula y al menos una mayúscula.</li>
+          <li>NO puede contener otros símbolos.</li>
+        </ul>
+      </ion-note>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    
+    
+
+  </form>
+
+</ion-content>

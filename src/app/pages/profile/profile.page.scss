@@ -1,0 +1,65 @@
+ion-list-header{
+    text-transform: uppercase;
+
+}
+
+ion-card-subtitle{
+    text-align: center;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.avatar ion-avatar{
+    width: 7rem;
+    height: 7rem;
+}
+
+.noAavatar {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+}
+
+.noAvatar ion-icon{
+    height: 6rem;
+    width: 6rem;
+    align-self: center;
+    color: red;
+}
+
+.changePhoto {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -2.5rem;
+    margin-left: 5rem;
+    position: relative;
+    z-index: 25;
+}
+
+.changePhoto ion-icon{
+    height: 19px;
+    width: 19px;
+    align-self: center;
+    color: white;
+    background-color:rgb(90, 90, 90);
+    border-radius: 50%;
+    border: 4px solid rgb(90, 90, 90);
+
+    
+}
+
+
+
+
+
+
